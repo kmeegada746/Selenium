@@ -17,8 +17,10 @@ namespace FirstTest
         StringBuilder verificationErrors;
         string baseURL;
         bool acceptNextAlert = true;
+
+
         [TestMethod]
-        public void SetupDllTest()
+        public void SeleniumTest()
         {
             IWebDriver driver = new ChromeDriver();
 
