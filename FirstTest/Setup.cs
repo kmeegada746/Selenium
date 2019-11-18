@@ -21,31 +21,26 @@ namespace FirstTest
         public void SetupDllTest()
         {
             IWebDriver driver = new ChromeDriver();
-                        
+
             {
                 driver.Navigate().GoToUrl("https://dev.cprs-pearl.com/login");
                 driver.Manage().Window.Maximize();
                 driver.FindElement(By.Name("userName")).Clear();
                 driver.FindElement(By.Name("userName")).SendKeys("kmeegada@cprs-inc.com");
                 driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Hello!'])[1]/following::input[2]")).Click();
-                //driver.FindElement(By.Name("password")).Clear();
                 Thread.Sleep(5000);
                 driver.FindElement(By.Name("password")).SendKeys("Pearl@cprs");
                 driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='PearlSupport@cprs-inc.com'])[1]/following::input[1]")).Click();
-                Thread.Sleep(5000);
+                Thread.Sleep(9000);
                 driver.FindElement(By.LinkText("Claims")).Click();
                 driver.FindElement(By.LinkText("Open Claims")).Click();
-                Thread.Sleep(15000);
-                driver.FindElement(By.XPath("//*[@id='react-app']/div/div/div/div/div[1]/div/div[3]/button")).Click();
-                //driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Days remaining'])[1]/following::button[1]")).Click();
-                //driver.FindElement(By.ClassName("addClaimButton")).Click();
-                //driver.FindElement(By.XPath(".//*[text()='Add New']")).Click();
-                //driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Days remaining'])[1]/following::button[1]")).Click();
-                //driver.FindElement(By.XPath("//*[@id='react-app']/div/div/div/div/div[1]/div/div[3]/button")).Click();
+                Thread.Sleep(55000);
+                driver.FindElement(By.XPath("/html/body/div[1]/div/div/div/div/div[1]/div/div[3]/button")).Click();
                 driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Category'])[1]/following::div[4]")).Click();
                 driver.FindElement(By.Id("react-select-3-option-1")).Click();
                 driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Type'])[1]/following::div[5]")).Click();
                 driver.FindElement(By.Id("react-select-4-option-2")).Click();
+                Thread.Sleep(10000);
                 driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='*'])[1]/following::div[4]")).Click();
                 driver.FindElement(By.Id("react-select-5-option-2")).Click();
                 driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='*'])[2]/following::div[4]")).Click();
